@@ -1,0 +1,29 @@
+---
+title: "Graphs with R"
+author: "Juanjo Sierra"
+date: "27 de noviembre de 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Graphs with R: Exercises
+
+First we need to load the ggplot2 library.
+
+```{r}
+library(ggplot2)
+```
+
+
+## 1) Plot distance against stretch.
+
+```{r}
+ex1 <- data.frame(stretch=c(46,54,48,50,44,42,52), distance=c(148,182,173,166,109,141,166))
+ex1
+
+ggplot(ex1, aes(distance, stretch)) + geom_point(col="blue", size=3)
+```
+
