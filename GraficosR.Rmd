@@ -27,3 +27,21 @@ ex1
 ggplot(ex1, aes(distance, stretch)) + geom_point(col="blue", size=3)
 ```
 
+## 2) The follwing data have ten observations taken during the years 1970-79, on October snow cover for Eurasia (snow cover is in millions of square kilometers).
+
+```{r}
+ex2 <- data.frame(year=c(1970:1979), snow.cover=c(6.5,12.0,14.9,10.0,10.7,7.9,21.9,12.5,14.5,9.2))
+ex2
+```
+
+### Plot snow.cover versus year.
+
+```{r}
+ggplot(ex2, aes(snow.cover, year)) + geom_point(col="green", size=3)
+```
+
+### Plot a histogram of the snow.cover values.
+
+```{r}
+ggplot(ex2, aes(snow.cover)) + geom_histogram(fill="green", col="darkgreen", bins = 4)
+```
